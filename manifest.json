@@ -1,13 +1,16 @@
 {
   "manifest_version": 3,
   "name": "Classroom Task Marker",
-  "version": "1.4",
+  "version": "1.5",
   "description": "Made by keplerqq, special thanks to gemini.google.com :D",
   "permissions": ["storage"],
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
