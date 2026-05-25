@@ -50,9 +50,25 @@ function initMarker() {
         const handle = (e, status) => {
             e.preventDefault();
             e.stopPropagation();
-            chrome.storage.local.set({ [taskId]: status }, () => {
-                applyStatus(task, status);
-            });
+            
+            let newStatus = status;
+            
+            // Logika przełączania (toggle)
+            if (status === 'done' && task.classList.contains('task-done')) {
+                newStatus = 'none';
+            } else if (status === 'todo' && task.classList.contains('task-todo')) {
+                newStatus = 'none';
+            }
+
+            if (newStatus === 'none') {
+                chrome.storage.local.remove(taskId, () => {
+                    applyStatus(task, newStatus);
+                });
+            } else {
+                chrome.storage.local.set({ [taskId]: newStatus }, () => {
+                    applyStatus(task, newStatus);
+                });
+            }
         };
 
         doneBtn.onclick = (e) => handle(e, 'done');
