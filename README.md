@@ -1,5 +1,7 @@
 # 🎓 Classroom Task Marker
 
+![Preview](logo.png)
+
 A lightweight Chrome Extension that helps you organize and visually track your Google Classroom assignments by color-coding them based on their current status. 
 
 With a simple hover and click, you can turn overwhelming task lists into a clean, scannable dashboard.
