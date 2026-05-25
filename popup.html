@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 240px;
+      padding: 16px;
+      margin: 0;
+      background-color: #ffffff;
+      color: #202124;
+    }
+    h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a73e8;
+      text-align: center;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 8px;
+      border: none;
+      border-radius: 6px;
+      background-color: #1a73e8;
+      color: white;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      transition: background-color 0.2s, transform 0.1s;
+      box-sizing: border-box;
+    }
+    .btn:hover {
+      background-color: #1557b0;
+    }
+    .btn:active {
+      transform: scale(0.98);
+    }
+    .btn-secondary {
+      background-color: #f1f3f4;
+      color: #3c4043;
+      border: 1px solid #dadce0;
+      box-shadow: none;
+    }
+    .btn-secondary:hover {
+      background-color: #e8eaed;
+    }
+    .status-msg {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 10px;
+      color: #5f6368;
+      min-height: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Kopia zapasowa zadań</h3>
+  <button id="export-btn" class="btn">Eksportuj dane (.json)</button>
+  <button id="import-btn" class="btn btn-secondary">Importuj dane</button>
+  <input type="file" id="file-input" style="display: none;" accept=".json">
+  <div id="status" class="status-msg"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
